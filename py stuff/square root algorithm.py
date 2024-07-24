@@ -14,10 +14,14 @@ def algorithm(c):
     while True:
         x_n = expression(c, x_n0)
 
-        x_n0 = x_n
-        print(x_n)
+        if x_n != x_n0:
+            x_n0 = x_n
+            print(x_n)
+        else:
+            print("aha here's your square root^^")
+            break
 
         time.sleep(0.5)
 
 if __name__ == "__main__":
-    algorithm(988) # input stuff (the number)
+    algorithm(10) # input stuff (the number)
